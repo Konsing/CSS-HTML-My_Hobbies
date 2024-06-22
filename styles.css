@@ -1,0 +1,124 @@
+body, header, footer, main, .hobby img, .description {
+    font-family: 'Comic Sans MS', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e0f7fa;
+}
+
+header, footer {
+    background: linear-gradient(to right, #004d40, #00251a);
+    color: #ffffff;
+    text-align: center;
+    padding: 1em;
+}
+
+header {
+    border-bottom: 5px solid #00251a;
+}
+
+main {
+    padding: 20px;
+    background-color: #b2dfdb;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#hobbies {
+    animation: fadeIn 2s;
+}
+
+.hobby {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.hobby-left {
+    background-color: #FEDCD2; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.hobby-right {
+    background-color: #D4E2D4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hobby img {
+    width: 45%;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hobby img:hover {
+    transform: scale(1.1);
+}
+
+.full-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.description {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+h2, h3 {
+    color: #ffffff;
+    text-align: left;
+    font-family: 'Comic Sans', serif;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    background-color: #511c48;
+    margin-bottom: 10px;
+}
+
+h3 {
+    background-color: #193c5f;
+}
+
+@media (max-width: 768px) {
+    .hobby img, .description {
+        width: 100%;
+    }
+
+    main, header, footer {
+        padding: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

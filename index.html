@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsing Ham Lopez</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 
+        Website Design Write-Up
+
+    The primary focus of this website is to display my personal hobbies and interests, particularly gaming and films. The site really accentuates the images and that was my goal. A little bit of text and some appealing images.
+
+    Color Scheme: I went with pastel colors because I want readers to feel at ease. The headers and footers feature a gradient of deep greens, which helps clearly differentiate sections. It also looks a little modern.
+
+    Typography: I used 2 fonts. Comic Sans for headers and Comic Sans MS for everything else. I thought this gave the site a better and more friendly look.
+
+    Images: The images are cool because when you click them, they enlarge, and you can see them in full-screen. They also become larger (slightly) when you hover over them.
+
+    Layout: The layout is simple and adapts easily to mobile view. This was a big issue before when the images refused to stack on top of each other.
+
+    Challenges: My main challenge as mentioned before was figuring out how to get the flex-wrap working for my images. This was included in the .images section in the html. Additionally, I didn’t know how to make the image full-screen, so I asked the AI course assist and it told me a general structure which I then expanded on.
+    
+    -->
+
+</head>
+<body>
+    <header>
+        <h1>Konsing Ham Lopez</h1>
+        <p>Computer Scientist</p>
+    </header>
+    <main>
+        <section id="hobbies">
+            <h2>My Hobbies</h2>
+            <h3>Gaming</h3>
+            <div class="hobby hobby-left">
+                <div class="images">
+                    <!-- Image credit: https://wall.alphacoders.com/big.php?i=1208017 -->
+                    <img src="forbiddenwest.jpg" alt="Horizon Forbidden West Poster" onclick="toggleFullScreen(this)">
+                    <!-- Image credit: Own photograph from GTA 5 RP server BCDOJRP -->
+                    <img src="RP.png" alt="GTA 5 RolePlay Image" onclick="toggleFullScreen(this)">
+                </div>
+                <p class="description">My biggest hobby is gaming, engaging with them daily. I play a wide range of games, from GTA 5 RP to shooter games like Call of Duty Modern Warfare 3, and expansive narratives like Horizon Forbidden West, which I'm 67 hours into. My gaming taste varies, also including games like Starfield, Hogwarts Legacy, The Last of Us Part 1, and Horizon Zero Dawn, ensuring I keep things fresh by switching between intense single player experiences and the communal engagement of FiveM (GTA 5 RP).</p>
+            </div>
+            <h3>Cinema</h3>
+            <div class="hobby hobby-right">
+                <div class="images">
+                    <!-- Image credit: https://gizmodo.com/amc-fuck-it-lets-do-streaming-too-1839060216 -->
+                    <img src="cinema.png" alt="AMC Theatre" onclick="toggleFullScreen(this)">
+                    <!-- Image credit: https://www.timeout.com/los-angeles/movie-theaters/the-wiz-screening -->
+                    <img src="cinema2.jpg" alt="Theatre Room" onclick="toggleFullScreen(this)">
+                </div>
+                <p class="description">Movies and shows captivate my interest as my second biggest hobby. During my time at Berkeley City College, I frequented theatres three times a week with my AMC A-List subscription. Despite fewer visits post-COVID, my passion remains strong, managing two films a day during breaks. My recent favorites include Dune 2 and Godzilla, continuing to fuel my cinematic enthusiasm.</p>
+            </div>
+        </section>                    
+    </main>
+    <footer>
+        <p>© 2024 Konsing Ham Lopez</p>
+    </footer>
+    <script>
+        function toggleFullScreen(img) {
+            var clone = img.cloneNode(true);
+            clone.onclick = function() {
+                document.body.removeChild(clone);
+            };
+            clone.classList.add('full-screen');
+            document.body.appendChild(clone);
+        }
+    </script>
+</body>
+</html>
